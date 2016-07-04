@@ -1,0 +1,480 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container {
+	width: 1000px;
+	margin: auto;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+body {
+	font-family: Verdana, Helvetica, Sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background: #ffffff;
+    line-height: 1.88889;
+}
+
+#map {
+	height:100%
+}
+
+#main-nav {
+	height: 500px;
+}
+
+
+#header {
+	height: 100px;
+	border-bottom: 1px #9966CC solid;	
+}
+
+#header h1
+{
+    font: italic normal bold 2.5em Monotype Corsiva, georgia, sans-serif;
+		text-align: center;
+		color: Purple;
+}
+
+#header h2
+{
+    font:italic normal 2.1em Monotype Corsiva, georgia, sans-serif;
+		text-align: center;
+		color: Green;
+}
+
+#sidebar {
+	float: left;
+	width: 180px;
+	line-height: 18px;	
+	border-left: 1px #9966CC solid;	
+}
+
+#sidebar li {
+	list-style: none;
+}
+
+#sidebar  h2
+{
+    font:italic normal 2.1em Monotype Corsiva, georgia, sans-serif;
+		text-align: center;
+		color: Green;
+}
+
+#content {
+	margin-right: 180px;
+	line-height: 18px;	
+}
+
+#footer {
+	clear: both;
+	height: 66px;
+}
+
+h1,h2 {
+	margin: 0;
+	padding: 0;
+}
+
+ul#menu
+{
+    border-bottom: 1px #9966CC solid;
+    padding: 0 0 2px;
+    /* position: relative; */
+    margin: 0;
+    text-align: left;
+    /* width:50%; */
+}
+
+ul#menu li
+{
+    display: inline;
+    list-style: none;
+    color: Green;
+}
+
+ul#menu li#greeting
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: Purple;
+    color: LightGreen;   
+}
+
+ul#menu li a:hover
+{
+    background-color: #fff;
+    text-decoration: none;
+}
+
+ul#menu li a:active
+{
+    background-color: #a6e2a6;
+    text-decoration: none;
+}
+
+ul#menu li.selected a
+{
+    background-color: #fff;
+    color: #000;
+}
+
+table
+{
+    color:#333333;border-collapse:collapse; 
+}
+			   
+
+tr.odd
+{
+   color:#333333;background-color:LightGreen;font-size:large;font-family:Verdana;border:medium solid white;
+}    
+
+tr.even
+{
+   color:#333333;background-color:#FFFFCC;font-size:large;font-family:Verdana;border:medium solid white;
+} 
+
+#paginationDiv
+{
+	font-family: Tahoma, Geneva, sans-serif;
+    font-size: 1.8em;
+	margin-top: 10px;	
+}
+
+#searchBox
+{
+    float:right;
+}
+
+#leftItemTemplate,#rightItemTemplate 
+{
+    padding: 0 0px;
+    margin: 0;
+}
+
+#leftItemTemplate 
+{
+    float: left;
+    padding: 5px;
+    width: 30%;
+}
+
+#rightItemTemplate 
+{
+    float: right;
+    padding: 5px;
+    width: 60%;
+}
+
+#leftItemTemplate h2
+{
+    text-align: left;
+    font: italic normal bold 2.1em "New Century Schoolbook", georgia, sans-serif;
+    color: Purple;
+}
+
+#leftItemTemplate h3
+{
+    text-align: left;
+    font: italic normal bold 1.7em  "New Century Schoolbook", georgia, sans-serif;
+    color: Green;    
+}
+
+#rightItemTemplate h3
+{
+    text-align: left;
+    font: italic normal bold 1.7em  "New Century Schoolbook", georgia, sans-serif;
+    color: Green;    
+}
+
+#leftItemTemplate img
+{
+	height: 200px;
+	width: 200px;
+    box-shadow: 10px 10px 10px #111;		
+}
+
+#ratingDiv img
+{
+	height: 20px;
+	width: auto;
+    box-shadow: 0px 0px 0px #111;		
+}
+
+#tracks
+{
+	clear: both;
+    width: 80%;
+	font: normal bold 1.2em Arial, Helvetica, sans-serif;
+}
+
+#tracks li {
+	list-style: none;
+
+}
+
+#album h2
+{
+    text-align: left;
+    font: italic normal bold 2.1em "New Century Schoolbook", georgia, sans-serif;
+    color: Purple;
+}
+
+
+#ratingFormDiv
+{
+	display:none;
+}
+
+#logout
+{
+	clear:both;
+}
+
+.albumimage img
+{
+	height: 50px;
+	width: 50px;
+    box-shadow: 2px 2px 2px #111;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+div.grid 
+{
+    width:700px;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.grid .album
+{
+    padding: 25px;
+	display: inline-block;
+	position: relative;
+}
+
+.grid .album img
+{
+	/*height: 100px;
+	width: 100px;*/
+    box-shadow: 5px 5px 5px #111;	
+}
+
+.grid .album  .albumdetails
+{
+    width: 200px;
+    background-color: #CCCCCC;
+	font-family: Tacoma;
+	font-size: 1.5em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 5px #111;
+    padding: 10px;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    top: -50px;
+    left: 100px;
+}
+
+.grid .album .albumdetails .albumtitle
+{
+	color: Purple;
+}
+
+.grid .album .albumdetails .artist
+{
+	color: Green;
+}
+
+.grid .album .image:hover  .albumdetails
+{
+    visibility: visible;
+}
+
+div.list
+{
+    background-color: White;
+    width: 700px;
+}
+
+.list .album
+{
+	height: 60px;
+    padding-left: 5px;
+}
+
+.list .album:nth-of-type(odd) {
+    background: LightGreen;
+}
+
+.list .album a
+{
+	text-decoration: none;	
+}
+
+.list .album img
+{
+	height: 50px;
+	width: 50px;
+    box-shadow: 2px 2px 2px #111;
+}
+
+.list .album .albumdetails
+{
+	visibility: visible;
+	display: inline;
+	margin-left: 25px;
+	font-family: Tacoma;
+	font-size: 1.5em;
+	text-decoration: none;
+	vertical-align: super;
+}
+
+.list .album .albumdetails .albumtitle
+{
+	color: Purple;
+	display: inline-block;
+	width: 50%;
+}
+
+.list .album .albumdetails .artist
+{
+	color: Green;
+	display: inline-block;
+	width: 35%;
+}
+
+#searchBox
+{
+    float:right;
+}
+
+#album h2
+{
+    text-align: left;
+    font: italic normal bold 2.1em "New Century Schoolbook", georgia, sans-serif;
+    color: Purple;
+}
+
+#layoutform {
+	width: 450px; 
+	background-color:#eeeeff;
+	border: 1px solid #849bbb; 
+	padding: 5px;
+	margin: 0px;
+}
+
+#layoutform div.row {
+/*	clear: both;*/
+	padding-top: 25px;
+}
+
+#layoutform div.row span.label {
+	float: left;
+	width: 100px;
+	text-align: left;
+	color: #032757;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;	
+  }
+
+#layoutform div.row span.info {
+	float: left;
+	width:250px;
+	text-align: left;
+	color: #032757;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;	
+	font-weight: bold;
+  }
+  
+#layoutform div.row span.formw {
+	float: right;
+	width: 300px;
+	text-align: left;
+  } 
+
+.album-image
+{
+	width:100px;
+	height:100px;
+}
+
+.album-image-magnified
+{
+	width:300px;
+	height:300px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

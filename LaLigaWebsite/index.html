@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="./Styles/styles2014.css"
+	    title="Default" media="all" />
+	<link rel="stylesheet" href="./scripts/dojo/dijit/themes/claro/claro.css"/>
+	
+	<script src="./scripts/jquery-1.11.2.min.js"></script>
+	<script src="./scripts/jquery-ui-1.11.3/jquery-ui.js"></script>	
+	<script>dojoConfig = {parseOnLoad: true}</script>
+	<script src='./scripts/dojo/dojo/dojo.js'></script>
+	<script>
+	//dependencies
+		require([
+		"dijit/form/ComboBox",
+		"dojo/parser"
+		]);
+	</script>
+<script language="javascript" src="./scripts/LaLiga.js"></script>
+<title>La Liga Website</title>
+</head>
+
+
+<body>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#" onclick="javascript:loadRegions()">Region</a>
+		<a href="#" onclick="javascript:loadCities()">City</a>
+		<a href="#" onclick="javascript:loadTeams()">Team</a>
+	</div>
+	
+	<span onclick="openNav()">Click me!</span>
+	
+	<div id="container">
+		<div id="header">
+			<h1>La Liga Website</h1>
+			<h2>Created by Ross Taggart</h2>
+		</div>
+		<div id="Buttons">
+			<button type="button" onClick="javascript:showHome()">HOME</button>
+			<button type="button" onClick="javascript:showTeams()">TEAMS</button>
+			<button type="button" onClick="javascript:showTable()">SCORES/TABLE</button>
+		</div>
+		<div id="Page Explanation">
+			Use the Map below or the search bar to view information about La Liga.
+			<br>The Map below has markers for each city that contains a La Liga team.
+		</div>
+		<div id="main-nav">
+			<div id="search">Search By:
+				<select data-dojo-type="dijit/form/ComboBox" id="searchChoice" name="searchChoice">
+					<option>City</option>
+					<option>Region</option>
+					<option>Team</option>
+				</select>
+				<input maxlength="100" id="searchText" name="searchText" size="25" />
+				<input type="submit" value="Go!" onClick="javascript:search(dijit.byId('searchChoice').get('value'), searchText.value)" /><br />
+			</div>
+			<div id="teamsPage" style="display:none">
+				<br><img src='./images/athleticbilbao_badge.png' style='width:200px;height:200px;'/><img src='./images/AthleticBilbao_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/atleticomadrid_badge.png' style='width:200px;height:200px;'/><img src='./images/AtleticoMadrid_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/fcbarcelona_badge.png' style='width:200px;height:200px;'/> <img src='./images/Barcelona_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/celtavigo_badge.png' style='width:200px;height:200px;'/><img src='./images/CeltaVigo_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/deportivolacoruna_badge.png' style='width:200px;height:200px;'/><img src='./images/DeportivoLaCoruna_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/eibar_badge.png' style='width:200px;height:200px;'/><img src='./images/Eibar_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/espanyol_badge.png' style='width:200px;height:200px;'/><img src='./images/Espanyol_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/getafe_badge.png' style='width:200px;height:200px;'/><img src='./images/Getafe_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/granada_badge.png' style='width:200px;height:200px;'/><img src='./images/Granada_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/laspalmas_badge.png' style='width:200px;height:200px;'/><img src='./images/LasPalmas_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/levante_badge.png' style='width:200px;height:200px;'/><img src='./images/Levante_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/malaga_badge.png' style='width:200px;height:200px;'/><img src='./images/Malaga_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/rayovallecano_badge.png' style='width:200px;height:200px;'/><img src='./images/RayoVallecano_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/realmadrid_badge.png' style='width:200px;height:200px;'/><img src='./images/RealMadrid_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/realsociedad_badge.png' style='width:200px;height:200px;'/><img src='./images/RealSociedad_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/sevilla_badge.png' style='width:200px;height:200px;'/><img src='./images/Sevilla_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/sportinggijon_badge.png' style='width:200px;height:200px;'/><img src='./images/SportingGijon_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/valencia_badge.png' style='width:200px;height:200px;'/><img src='./images/Valencia_Current_Squad (Custom).png' style='width:400px;height:300px;'/>
+				<br><img src='./images/villarreal_badge.png' style='width:200px;height:200px;'/><img src='./images/Villarreal_Current_Squad (Custom).png' style='width:400px;height:300px;'/>	
+			</div>
+			<div id="tablePage" style="display:none">
+				<script language="Javascript" type="text/javascript" src="http://widgets.elpais.com/liga/wlaunch.html?c=azul&w=750&h=555">
+				</script> 
+			</div>
+			<div id="teamSearch" style="display:none">
+			</div>
+			<div id="regionSearch" style="display:none">
+			</div>
+			<div id="citySearch" style="display:none">
+			</div>
+			<div id="map">
+			</div>
+			<script>
+			var map;
+			var contentString = "";
+			var infoWindow;
+				
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: 40.438, lng: -3.820},
+					zoom: 6
+				});
+				
+				infoWindow = new google.maps.InfoWindow({
+					map: map,
+					content: contentString,
+					maxWidth:400
+					});
+					
+				var data = getMarkersMap();
+				var lats = data[0];
+				var longs = data[1];
+				var colours = data[2];
+				
+				for (var i=0; i<lats.length; i++)
+				{
+					var location = new google.maps.LatLng(lats[i], longs[i]);
+					var pin = "http://www.googlemapsmarkers.com/v1/" + colours[i];
+					var marker = new google.maps.Marker({
+						map: map,
+						position: location,
+						icon: pin,
+					});
+				
+					marker.addListener('click', function(){
+						this.setAnimation(google.maps.Animation.BOUNCE);
+						infoWindow.setContent(createInfoWindowContent(this.getPosition().lat(), this.getPosition().lng()));
+						infoWindow.open(map, this);
+					});
+				}
+			}
+			
+			</script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu45CfBrJhARRD3xYbyLMwGTVyocIAfPk&callback=initMap"
+			async defer></script>
+		</div>
+	</div>
+</body>
+</html>
